@@ -13,7 +13,7 @@ app.get("/user",(req,res)=>{
     res.json(users)
 })
 
-app.get("/register", async (req, res) => {
+app.post("/register", async (req, res) => {
    try {
     const connection = await MongoClient.connect(URL);
 
