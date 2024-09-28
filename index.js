@@ -9,9 +9,11 @@ app.use(cors({
 }))
 app.use(express.json())
 let users =[]
+app.get("/user",(req,res)=>{
+    res.json(users)
+})
 
-
-app.post("/register", async (req, res) => {
+app.get("/register", async (req, res) => {
    try {
     const connection = await MongoClient.connect(URL);
 
