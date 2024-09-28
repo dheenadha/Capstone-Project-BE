@@ -5,7 +5,7 @@ const { MongoClient, ObjectId } = require("mongodb");
 
 const URL ="mongodb+srv://dheena:dheena@cluster0.exzcn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 app.use(cors({
-    origin: " http://localhost:5173"
+    origin: " https://capable-palmier-4f3501.netlify.app/"
 }))
 app.use(express.json())
 let users =[]
