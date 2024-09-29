@@ -1,17 +1,13 @@
 const express = require("express");
 const cors = require("cors")
 const app = express();
-const { MongoClient, ObjectId } = require("mongodb");
+const { MongoClient } = require("mongodb");
 
 const URL ="mongodb+srv://dheena:dheena@cluster0.exzcn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-app.use(cors({
-    origin: " https://capable-palmier-4f3501.netlify.app/"
-}))
+app.use(cors());
 app.use(express.json())
-let users =[]
-app.get("/user",(req,res)=>{
-    res.json(users)
-})
+let users=[]
+
 
 app.post("/register", async (req, res) => {
    try {
