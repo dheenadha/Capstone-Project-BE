@@ -11,6 +11,29 @@ const SECRET_KEY =
 app.use(cors());
 app.use(express.json())
 let users=[]
+app.get("/register", async (req, res) => {
+  try {
+    // 1. Connect the Database Server
+    const connection = await MongoClient.connect(URL);
+
+    // 2. Select the Database
+    const db = connection.db("tour");
+
+    // 3. Select the collection
+    const collection = db.collection("register");
+
+    const students = await collection.find({}).toArray();
+
+    // 5. Close the connection
+    await connection.close();
+
+    res.json(students);
+  } catch (error) {
+    res.status(500).json({
+      message: "Something went wrong",
+    });
+  }
+});
 
 
 app.post("/register", async (req, res) => {
