@@ -5,7 +5,7 @@ const { MongoClient } = require("mongodb");
 const bcrypt = require("bcryptjs");
 const jwt= require("jsonwebtoken")
 
-const URL ="mongodb+srv://dheenadhayalan2004:dheena@cluster0.mppcm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+const URL ="mongodb+srv://dheena:dheena@cluster0.exzcn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 const SECRET_KEY =
   "CKSNBMSLZFHGXdgwufgvbhawmaeo4378rtgxyuhjzbdxfxckquebivjqexiv";
 app.use(cors());
